@@ -1,0 +1,27 @@
+PROGRAM NOMBRE_PREMIER;
+VAR I : INTEGER;
+    N : INTEGER;
+    TROUVE : BOOLEAN;
+Begin
+WRITE('ENTRER_UN_NOMBRE');
+READ(N);
+ IF (N =0) OR (N =1) THEN WRITE (N,'PAS_PREMIER')
+	 ELSE
+	   BEGIN
+       I := 2;
+			 TROUVE := FALSE;
+			WHILE ((I< (N DIV 2)) OR (I= (N DIV 2))) AND (TROUVE = FALSE )DO ;
+			BEGIN
+			 IF (N MOD I)=0 THEN TROUVE:=FALSE
+			 ELSE
+			  BEGIN
+				I := I+1 ;
+				END;
+			END;
+			 IF TROUVE = TRUE THEN WRITE(N, 'PAS_PREMIER')
+			 ELSE
+			  BEGIN
+			  WRITE(N, 'EST_PREMIER');
+			  END;
+	   END ;
+END.

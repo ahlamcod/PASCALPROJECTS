@@ -1,0 +1,22 @@
+PROGRAM TRAIN;
+VAR A,B,C,D,E,F,G,H,I: INTEGER;
+BEGIN
+ WRITELN('ENTRER_TEMPS_DE_DEPART');
+ READLN(D,E,F);
+ WRITELN('ENTRER_LA_DUREE');
+ READLN(G,H,I);
+ C :=F+I;
+  IF (C>60) OR (C =60) Then
+   BEGIN
+    C:= C-60;
+	  B:=1;
+   END ;
+ B:=H+E+B ;
+  IF (B>60) OR (B=60) THEN
+   BEGIN
+   B:=B-60;
+   A:=1;
+   END;
+ A:=D+G+A;
+ WRITELN('LE_TEMPS_D''ARRIVER_EST',A,B,C);
+END.
